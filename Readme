@@ -1,0 +1,114 @@
+Java Concepts 
+1. Input and Output
+Concept Explanation:
+Input and output (I/O) in Java involve reading data from a source (such as the user or a file) and displaying or writing data to a target (like the console). Common input methods include reading from the keyboard or command-line arguments, while output is usually printed to the console.
+
+Scanner class: Provides parsing methods to read different types (int, String, etc.) from standard input conveniently.
+
+Command-line arguments: Parameters passed during program start, accessible via the String[] args parameter in main.
+
+BufferedReader: A character input stream that efficiently reads text from input streams (like System.in), often used when line-oriented input is preferred.
+
+System.out.println: Standard output stream to print text/data.
+
+Code Implementation Details:
+The method withScanner() creates a Scanner object that reads an integer and a string from the user, demonstrating usage of nextInt() and nextLine().
+
+The method withoutScannerArgs() loops over the array args to print any command-line arguments.
+
+The method withoutScannerBufferedReader() sets up a BufferedReader wrapping InputStreamReader(System.in) and reads a full line of input.
+
+Proper resource management is illustrated (closing Scanner and BufferedReader).
+
+2. Types of Operations
+Concept Explanation:
+Operations perform actions on data and include multiple categories:
+
+Arithmetic operators: Perform mathematical calculations (+, −, *, /, %).
+
+Relational operators: Compare two values and return Boolean results (==, !=, <, >).
+
+Logical operators: Combine Boolean expressions (&&, ||, !).
+
+Bitwise operators: Manipulate integer values at the bit level (&, |, ^, ~).
+
+Assignment operators: Assign values and optionally combine an operation with assignment (=, +=, *=).
+
+Code Implementation Details:
+Variables a and b store integer values to demonstrate arithmetic and bitwise operations.
+
+Boolean variables x and y illustrate logical operators.
+
+Each operation outputs the result via System.out.println, allowing observation of behavior.
+
+Compound assignments (like c += b) show how operations can be combined with assignment.
+
+3. All Data Types Combinations
+Concept Explanation:
+Java has eight primitive data types representing basic values:
+
+Numeric integers (byte, short, int, long)
+
+Floating-point numbers (float, double)
+
+Character (char)
+
+Boolean (boolean)
+
+Type casting is the conversion from one data type to another:
+
+Implicit casting (widening): Smaller types convert automatically to larger types without loss of information.
+
+Explicit casting (narrowing): Larger types convert to smaller types manually; data may be lost or truncated.
+
+String concatenation with primitives uses the + operator, converting primitives to strings implicitly.
+
+Code Implementation Details:
+Initializes example variables for each primitive type.
+
+Demonstrates implicit casting by summing smaller types into an int and promoting an int to a double.
+
+Shows explicit casting from double to int.
+
+Combines multiple primitive values with string literals for output.
+
+4. Access Modifiers – public, static, abstract
+Concept Explanation:
+public: An access level modifier that allows visibility to classes, methods, or fields from any other class.
+
+static: Indicates a member belongs to the class rather than instances, allowing shared data or methods without object creation.
+
+abstract: Used with classes and methods that are incomplete by themselves; abstract classes cannot be instantiated directly and often contain abstract methods without a body, which subclasses must implement.
+
+Code Implementation Details:
+Defines an abstract class Animal with an abstract method makeSound().
+
+Defines a subclass Dog implementing the abstract method.
+
+Contains a public class with:
+
+A static variable staticCounter that counts the number of created instances.
+
+A static method to report how many instances exist.
+
+The main method creates instances and calls these methods demonstrating static and public usage.
+
+5. Control Statements
+Concept Explanation:
+Control statements dictate the flow or branching within a program:
+
+If-else: Conditional branching allowing execution of code blocks depending on Boolean expressions.
+
+Switch-case: Multi-way branch selecting code to execute based on the value of a variable.
+
+Loops: Repeat execution:
+
+for loop repeats with an explicit initialization, condition, and update.
+
+while loop repeats as long as a condition is true.
+
+do-while loop executes at least once before condition check.
+
+break: Exits the closest enclosing loop or switch-case immediately.
+
+continue: Skips the current iteration and moves to the next loop iteration.
